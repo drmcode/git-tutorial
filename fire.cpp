@@ -154,7 +154,7 @@ int main()
         }
         cout<<"index "<<i<<", pid is "<<pid[i]<<endl;
     }
-    
+     
     List *p = (List *)malloc(sizeof(List));
     char * data1 = (char *)malloc(sizeof("test1"));
     strncpy(data1, "test1", sizeof("test1"));
