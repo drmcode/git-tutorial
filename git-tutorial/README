@@ -1,0 +1,8 @@
+###VS CODE USING###
+
+1. start new window of VS.
+ .code 
+
+
+###MAKE FILE RELATED###
+1. OBJS must list all *.o files which needed by TARGET
