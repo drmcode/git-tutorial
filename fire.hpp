@@ -11,6 +11,8 @@
 #include <vector>
 #include <algorithm>
 
+#include <string>
+
 //for socket
 #include <sys/socket.h>
 #include <sys/types.h>
@@ -184,6 +186,11 @@ class BasicCString{
          }
          return des;
     } 
+};
+
+class StringSolution{
+    public:
+        std::string longestCommonPrefix(std::vector<std::string>& strs);
 };
 
 class SStack{

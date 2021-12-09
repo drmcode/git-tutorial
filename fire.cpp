@@ -461,6 +461,43 @@ void lambda_test()
     std::cout<<endl;
 }
 
+string StringSolution::longestCommonPrefix(vector<string>& strs)
+{
+    std::string out;
+    if(strs.empty()) return out;
+
+    for(std::size_t j = 0; j< strs[0].size(); j++){
+        for(unsigned int i = 1; i< strs.size(); i++){
+            if(j > strs[i].length()-1 || strs[i][j] != strs[0][j]){
+               return out;
+            }
+        }
+        out.append(1, strs[0][j]);
+    }
+
+    return out;
+}
+
+void baseString()
+{
+    StringSolution strs;
+    std::vector<std::string> ss = {"flower", "flow", "flignt"};
+    cout<<"logestPreFix: "<<strs.longestCommonPrefix(ss)<<endl;
+
+#if 0
+//just test git
+//crash coredump caused using %s printf int parameter.
+    char test1[] = {"testtesttest"};
+    int test2 = 1234567;
+
+    printf("test1 char to int, is %d\n", test1);
+    
+    printf("test2, int to char is %s\n", test2);
+#endif
+
+    return;
+}
+
 void test()
 {
     char b64_key[256] = {"KGFubjogMTIzNDU2KSwgKGFubjogMTIzNDU2KQ=="};
@@ -583,6 +620,9 @@ int main(int argc, char **argv)
     lambda_test();
 
     //test();
+    baseString();
+    return 1;
+
     unsigned char aa[2] = {"1"};
     /*aa[0] = 1;
     aa[1] = 2;
