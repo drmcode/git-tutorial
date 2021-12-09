@@ -618,6 +618,7 @@ int main(int argc, char **argv)
 
     lambda_test();
 
+    //test git
     //test();
     baseString();
     return 1;
